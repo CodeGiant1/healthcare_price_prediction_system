@@ -16,24 +16,27 @@ import { Link } from 'react-router-dom';
 export const UserFullName = ({ nextStep }) => {
   return (
     <Flex
+      position={'relative'}
       bg="#E5E5E5"
       flexDirection={'column'}
-      pt="10"
+      pt="20"
       alignItems={'center'}
       h="100vh"
     >
       <Flex flexDirection={'column'} alignItems={'center'} w="sm" h="sm">
-        <Text>Logo</Text>
-        <Stack spacing={5}>
+        <Text position="absolute" left="16" top="10">
+          Logo
+        </Text>
+        {/* <Stack spacing={5}>
           <Progress
-            my="5"
+            mt="5"
             w="sm"
             borderRadius={'20'}
             colorScheme="blue"
-            size="sm"
-            value={32}
+            size="xs"
+            value={28}
           />
-        </Stack>
+        </Stack> */}
         <Box borderRadius={'5'} mt="5  " bg="white" p="10">
           <Box py="2">
             <Text fontWeight={'medium'}>What should I call you ?</Text>
@@ -46,8 +49,8 @@ export const UserFullName = ({ nextStep }) => {
               <FormLabel fontSize={'sm'}>First name</FormLabel>
               <Input
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Enter first name"
+                color="text"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -59,8 +62,8 @@ export const UserFullName = ({ nextStep }) => {
               <FormLabel fontSize={'sm'}>Last name</FormLabel>
               <Input
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Enter last name"
+                color="text"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -73,10 +76,10 @@ export const UserFullName = ({ nextStep }) => {
                 fontSize={'sm'}
                 w="full"
                 h="10"
-                borderRadius={'sm'}
+                borderRadius={'md'}
                 color="white"
-                bg="#3182ce"
-                _hover={{ color: 'white', bg: '#3182ce' }}
+                bg="primary"
+                _hover={{ color: 'white', bg: 'primary' }}
                 onClick={nextStep}
               >
                 Next

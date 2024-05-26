@@ -9,6 +9,7 @@ import {
   Select,
   Stack,
   Text,
+  Textarea,
 } from '@chakra-ui/react';
 import React from 'react';
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
@@ -19,22 +20,25 @@ export const UserContact = ({ nextStep, previousStep }) => {
     <Flex
       bg="#E5E5E5"
       flexDirection={'column'}
-      pt="10"
+      pt="20"
       alignItems={'center'}
       h="100vh"
+      position={'relative'}
     >
       <Flex flexDirection={'column'} alignItems={'center'} w="sm" h="sm">
-        <Text>Logo</Text>
-        <Stack spacing={5}>
+        <Text position="absolute" left="16" top="10">
+          Logo
+        </Text>
+        {/* <Stack spacing={5}>
           <Progress
-            my="5"
+            mt="5"
             w="sm"
             borderRadius={'20'}
             colorScheme="blue"
-            size="sm"
-            value={44}
+            size="xs"
+            value={48}
           />
-        </Stack>
+        </Stack> */}
         <Box borderRadius={'5'} mt="5  " bg="white" p="10">
           <Box py="2">
             <Text fontWeight={'medium'}>How do I contant you?</Text>
@@ -47,8 +51,8 @@ export const UserContact = ({ nextStep, previousStep }) => {
               <FormLabel fontSize={'sm'}>Email address</FormLabel>
               <Input
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Enter email address"
+                color="text"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -60,8 +64,8 @@ export const UserContact = ({ nextStep, previousStep }) => {
               <FormLabel fontSize={'sm'}>Phone number</FormLabel>
               <Input
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Enter phone number"
+                color="text"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -71,10 +75,10 @@ export const UserContact = ({ nextStep, previousStep }) => {
             </Box>
             <Box>
               <FormLabel fontSize={'sm'}>Address</FormLabel>
-              <Input
+              <Textarea
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Enter home address"
+                color="text"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -92,7 +96,7 @@ export const UserContact = ({ nextStep, previousStep }) => {
                   borderRadius={'md'}
                   color="text"
                   bg="#E5E5E5"
-                  _hover={{ color: 'white', bg: '#3182ce' }}
+                  _hover={{ color: 'black', border: '1px solid primary' }}
                   onClick={previousStep}
                   leftIcon={<IoIosArrowRoundBack size={'20'} />}
                 >
@@ -105,20 +109,20 @@ export const UserContact = ({ nextStep, previousStep }) => {
                   h="10"
                   borderRadius={'md'}
                   color="white"
-                  bg="#3182ce"
-                  _hover={{ color: 'white', bg: '#3182ce' }}
+                  bg="primary"
+                  _hover={{ color: 'white', bg: 'primary' }}
                   onClick={nextStep}
                   rightIcon={<IoIosArrowRoundForward size={'20'} />}
                 >
                   Next
                 </Button>
               </Flex>
-              <Flex pt="5" fontSize={'sm'} justifyContent={'center'} gap="1">
+              {/* <Flex pt="5" fontSize={'sm'} justifyContent={'center'} gap="1">
                 <Text color="#0A0A0A">Already have an account? </Text>
                 <Link>
                   <Text fontWeight={'medium'}>Sign In</Text>
                 </Link>
-              </Flex>
+              </Flex> */}
             </Box>
           </Flex>
         </Box>

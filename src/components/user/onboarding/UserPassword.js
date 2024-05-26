@@ -19,36 +19,40 @@ export const UserPassword = ({ completeOnboarding, previousStep }) => {
     <Flex
       bg="#E5E5E5"
       flexDirection={'column'}
-      pt="10"
+      pt="20"
       alignItems={'center'}
       h="100vh"
+      position="relative"
     >
       <Flex flexDirection={'column'} alignItems={'center'} w="sm" h="sm">
-        <Text>Logo</Text>
-        <Stack spacing={5}>
+        <Text position="absolute" left="16" top="10">
+          Logo
+        </Text>
+        {/* <Stack spacing={5}>
           <Progress
-            my="5"
+            mt="5"
             w="sm"
             borderRadius={'20'}
             colorScheme="blue"
-            size="sm"
-            value={44}
+            size="xs"
+            value={64}
           />
-        </Stack>
+        </Stack> */}
         <Box borderRadius={'5'} mt="5  " bg="white" p="10">
           <Box py="2">
-            <Text fontWeight={'medium'}>How do I contant you?</Text>
+            <Text fontWeight={'medium'}>How Do I Keep Your Account Safe?</Text>
             <Text textAlign={'center'} color={'#718096'} fontSize={'xs'}>
-              Please enter your Email, Phone Number and Address
+              Please enter your password
             </Text>
           </Box>
           <Flex gap={'3'} flexDirection={'column'} w="xs">
             <Box>
-              <FormLabel fontSize={'sm'}>Email address</FormLabel>
+              <FormLabel fontSize={'sm'}>Password</FormLabel>
               <Input
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Enter password"
+                color="text"
+                type="password"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -57,11 +61,12 @@ export const UserPassword = ({ completeOnboarding, previousStep }) => {
               />
             </Box>
             <Box>
-              <FormLabel fontSize={'sm'}>Phone number</FormLabel>
+              <FormLabel fontSize={'sm'}>Confirm Password</FormLabel>
               <Input
                 fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
+                placeholder="Confirm password"
+                color="text"
+                type="password"
                 border="1px solid #EBEBEB"
                 w="full"
                 h="10"
@@ -69,19 +74,7 @@ export const UserPassword = ({ completeOnboarding, previousStep }) => {
                 bg="white"
               />
             </Box>
-            <Box>
-              <FormLabel fontSize={'sm'}>Address</FormLabel>
-              <Input
-                fontSize={'sm'}
-                placeholder="Select business industry"
-                color="#A4A4A4"
-                border="1px solid #EBEBEB"
-                w="full"
-                h="10"
-                borderRadius={'sm'}
-                bg="white"
-              />
-            </Box>
+
             <Box>
               <Flex gap="5">
                 <Button
@@ -92,7 +85,7 @@ export const UserPassword = ({ completeOnboarding, previousStep }) => {
                   borderRadius={'md'}
                   color="text"
                   bg="#E5E5E5"
-                  _hover={{ color: 'white', bg: '#3182ce' }}
+                  _hover={{ color: 'black', border: '1px solid primary' }}
                   onClick={previousStep}
                   leftIcon={<IoIosArrowRoundBack size={'20'} />}
                 >
@@ -105,20 +98,20 @@ export const UserPassword = ({ completeOnboarding, previousStep }) => {
                   h="10"
                   borderRadius={'md'}
                   color="white"
-                  bg="#3182ce"
-                  _hover={{ color: 'white', bg: '#3182ce' }}
+                  bg="primary"
+                  _hover={{ color: 'white', bg: 'primary' }}
                   onClick={completeOnboarding}
                   rightIcon={<IoIosArrowRoundForward size={'20'} />}
                 >
                   Finish
                 </Button>
               </Flex>
-              <Flex pt="5" fontSize={'sm'} justifyContent={'center'} gap="1">
+              {/* <Flex pt="5" fontSize={'sm'} justifyContent={'center'} gap="1">
                 <Text color="#0A0A0A">Already have an account? </Text>
                 <Link>
                   <Text fontWeight={'medium'}>Sign In</Text>
                 </Link>
-              </Flex>
+              </Flex> */}
             </Box>
           </Flex>
         </Box>
