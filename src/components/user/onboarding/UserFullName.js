@@ -17,7 +17,7 @@ export const UserFullName = ({ nextStep }) => {
   return (
     <Flex
       position={'relative'}
-      bg="#E5E5E5"
+      bg="background"
       flexDirection={'column'}
       pt="20"
       alignItems={'center'}
@@ -87,7 +87,7 @@ export const UserFullName = ({ nextStep }) => {
 
               <Flex pt="5" fontSize={'sm'} justifyContent={'center'} gap="1">
                 <Text color="#0A0A0A">Already have an account? </Text>
-                <Link>
+                <Link to="/">
                   <Text fontWeight={'medium'}>Sign In</Text>
                 </Link>
               </Flex>

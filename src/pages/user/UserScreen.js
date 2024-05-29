@@ -1,5 +1,11 @@
 import React from 'react';
+import { DashboardLayout } from '../../layout/DashboardLayout';
+import { Outlet } from 'react-router-dom';
 
 export const UserScreen = () => {
-  return <div>UserScreen</div>;
+  return (
+    <DashboardLayout>
+      <Outlet />
+    </DashboardLayout>
+  );
 };

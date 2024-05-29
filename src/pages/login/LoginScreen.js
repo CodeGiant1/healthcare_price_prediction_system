@@ -43,7 +43,7 @@ export const LoginScreen = () => {
                   w="full"
                   h="10"
                   border="none"
-                  bg="background"
+                  bg="white"
                   px="3"
                   borderRadius={'sm'}
                 />
@@ -57,7 +57,7 @@ export const LoginScreen = () => {
                   w="full"
                   h="10"
                   border="none"
-                  bg="background"
+                  bg="white"
                   px="3"
                   borderRadius={'sm'}
                 />
@@ -82,7 +82,7 @@ export const LoginScreen = () => {
                     borderRadius={'sm'}
                     color="white"
                     fontSize={'sm'}
-                    _hover={{ color: 'white', bg: '#3182ce' }}
+                    _hover={{ color: 'white', bg: 'primary' }}
                     bg={'primary'}
                   >
                     Sign In

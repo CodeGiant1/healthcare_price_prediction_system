@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 export const UserPassword = ({ completeOnboarding, previousStep }) => {
   return (
     <Flex
-      bg="#E5E5E5"
+      bg="background"
       flexDirection={'column'}
       pt="20"
       alignItems={'center'}
